@@ -1,0 +1,1 @@
+Some basic utils for Majong I've developed
