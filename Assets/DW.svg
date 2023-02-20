@@ -1,1 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n<svg height="95" width="75" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"><rect width="100%" fill="#fff" height="100%"/><g stroke-width="1.5" fill="none"><rect rx="5" height="79" width="59" stroke="#040" y="8" x="8"/></g></svg>\n'
+<?xml version="1.0" ?>
+<svg xmlns="http://www.w3.org/2000/svg" height="95" width="75" shape-rendering="geometricPrecision">
+	<rect width="100%" fill="#fff" height="100%"/>
+	<g stroke-width="1.5" fill="none">
+		<rect rx="5" height="79" width="59" stroke="#040" y="8" x="8"/>
+	</g>
+</svg>

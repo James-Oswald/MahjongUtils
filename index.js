@@ -81,7 +81,7 @@ for(let dragonColor of dragonColors){
 
 const allTiles = [].concat(...Array(4).fill(allUniqueTiles))
 
-//Classic Fisher Yates
+//Classic Fisher Yates Random Subset Selection
 //https://stackoverflow.com/a/11935263/6342516
 function fisherYates(arr, size) {
     var shuffled = arr.slice(0), i = arr.length, temp, index;
@@ -98,8 +98,11 @@ function newHand(){
     hand = fisherYates(allTiles, 13);
     handDiv = document.getElementById("hand");
     handDiv.innerHTML = "";
-    for(let tile of hand)
-        handDiv.appendChild(tile.image);
+    for(let i = 0; i < hand.length; i++){
+        let tileImage = hand[i].image.cloneNode();
+        tileImage.classList.add("tile");
+        handDiv.appendChild(tileImage);
+    }
 }
 
 

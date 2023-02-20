@@ -3,6 +3,7 @@
 import re
 import base64
 import urllib.parse
+import xml.dom.minidom
 
 fileContents = open("assets.css", "r").read()
 
@@ -18,4 +19,9 @@ for match in matches:
         decodeString = urllib.parse.unquote(data, encoding='utf-8', errors='replace')
     else:
         raise "Invalid Encoding"
-    open("./Assets/" + tileId + ".svg", "w").write(decodeString)
+    decodeString = decodeString.replace("\n", "")
+    decodeString = decodeString.replace("\\n", "")
+    cleanedDecodedString = re.findall(r"\<\?xml.*?\<\/svg\>", decodeString)[0]
+    dom = xml.dom.minidom.parseString(cleanedDecodedString)
+    prettySVG = dom.toprettyxml()
+    open("./Assets/" + tileId + ".svg", "w").write(prettySVG)
