@@ -1,1 +1,1 @@
-Some basic utils for Mahjong I've developed
+Some basic utils for Mahjong I've developed. So far gets a hand.
